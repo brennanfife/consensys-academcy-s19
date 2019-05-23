@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 contract SimpleBank {
     mapping (address => uint) private balances; // Using 'private' to protect our users balance from other contracts
     mapping (address => bool) public enrolled; // Using 'public' to create a getter function and allow contracts to if a user is enrolled
-    address public owner; // Using 'public' to make sure everyone knows who owns the bank. Use the appropriate keyword for this
+    address public owner; // Using 'public' to make sure everyone knows who owns the bank.
     event LogEnrolled(address accountAddress);
     event LogDepositMade(address accountAddress, uint amount);
     event LogWithdrawal(address accountAddress, uint withdrawAmount, uint newBalance);
